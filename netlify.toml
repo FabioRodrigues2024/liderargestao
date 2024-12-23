@@ -6,7 +6,7 @@
   NODE_VERSION = "18.19.0"
   NODE_ENV = "production"
   CI = "true"
-  NPM_FLAGS = "--no-audit --no-optional --legacy-peer-deps"
+  NPM_FLAGS = "--no-audit --no-optional --legacy-peer-deps --prefer-offline"
 
 [[redirects]]
   from = "/*"
