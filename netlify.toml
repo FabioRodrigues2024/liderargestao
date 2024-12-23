@@ -1,13 +1,12 @@
 [build]
-  command = "npm run build"
+  command = "npm install && npm run build"
   publish = "dist"
-  site_id = "94e222eb-4908-4ee7-b924-895860b1a168"
 
 [build.environment]
-  NODE_VERSION = "18"
+  NODE_VERSION = "18.19.0"
   NODE_ENV = "production"
   CI = "true"
-  NPM_FLAGS = "--no-audit --no-optional"
+  NPM_FLAGS = "--no-audit --no-optional --legacy-peer-deps"
 
 [[redirects]]
   from = "/*"
@@ -16,6 +15,7 @@
 
 [functions]
   directory = "netlify/functions"
+  node_bundler = "esbuild"
 
 [dev]
   framework = "vite"
@@ -31,6 +31,7 @@
 [build.processing.js]
   bundle = true
   minify = true
+  target = "es2015"
 
 [build.processing.html]
   pretty_urls = true
