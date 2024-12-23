@@ -1,7 +1,7 @@
 [build]
-  command = "npm install && tsc && vite build"
+  command = "npm run build"
   publish = "dist"
-  site_id = "66d9f941-7acf-4248-bd39-e193acfa5fca"
+  site_id = "94e222eb-4908-4ee7-b924-895860b1a168"
 
 [build.environment]
   NODE_VERSION = "18"
