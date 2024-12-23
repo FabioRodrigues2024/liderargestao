@@ -21,6 +21,10 @@ export default defineConfig({
           ui: ['@radix-ui/react-tabs', 'lucide-react']
         }
       }
+    },
+    commonjsOptions: {
+      include: [/node_modules/],
+      transformMixedEsModules: true
     }
   },
   server: {
@@ -28,6 +32,9 @@ export default defineConfig({
     host: true
   },
   optimizeDeps: {
-    include: ['react', 'react-dom']
+    include: ['react', 'react-dom'],
+    esbuildOptions: {
+      target: 'es2015'
+    }
   }
 })
