@@ -8,6 +8,7 @@
   NODE_ENV = "production"
   CI = "true"
   NPM_FLAGS = "--no-audit --no-optional"
+  PYTHON_VERSION = "false"
 
 [[redirects]]
   from = "/*"
