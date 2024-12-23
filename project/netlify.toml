@@ -1,5 +1,5 @@
 [build]
-  command = "npm install && npm run build"
+  command = "npm ci && npm run build"
   publish = "dist"
   site_id = "94e222eb-4908-4ee7-b924-895860b1a168"
 
@@ -8,6 +8,8 @@
   NODE_ENV = "production"
   CI = "true"
   NPM_FLAGS = "--no-audit --no-optional"
+  PYTHON_VERSION = "false"
+  NETLIFY_USE_YARN = "false"
 
 [[redirects]]
   from = "/*"
