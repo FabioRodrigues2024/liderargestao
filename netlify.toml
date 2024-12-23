@@ -1,0 +1,39 @@
+[build]
+  command = "npm run build"
+  publish = "dist"
+  site_id = "66d9f941-7acf-4248-bd39-e193acfa5fca"
+
+[build.environment]
+  NODE_VERSION = "18"
+  NODE_ENV = "production"
+  CI = "true"
+  NPM_FLAGS = "--no-audit --no-optional"
+
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
+
+[functions]
+  directory = "netlify/functions"
+
+[dev]
+  framework = "vite"
+  targetPort = 5173
+
+[build.processing]
+  skip_processing = false
+
+[build.processing.css]
+  bundle = true
+  minify = true
+
+[build.processing.js]
+  bundle = true
+  minify = true
+
+[build.processing.html]
+  pretty_urls = true
+
+[build.processing.images]
+  compress = true
