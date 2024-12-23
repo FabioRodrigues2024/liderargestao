@@ -1,5 +1,5 @@
 [build]
-  command = "npm run build"
+  command = "npm install && npm run build"
   publish = "dist"
 
 [build.environment]
@@ -31,6 +31,7 @@
 [build.processing.js]
   bundle = true
   minify = true
+  target = "es2015"
 
 [build.processing.html]
   pretty_urls = true
