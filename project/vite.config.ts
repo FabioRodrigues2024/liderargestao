@@ -13,6 +13,7 @@ export default defineConfig({
     outDir: 'dist',
     sourcemap: false,
     minify: true,
+    target: 'es2015',
     rollupOptions: {
       output: {
         manualChunks: {
@@ -25,5 +26,8 @@ export default defineConfig({
   server: {
     port: 5173,
     host: true
+  },
+  optimizeDeps: {
+    include: ['react', 'react-dom']
   }
 })
